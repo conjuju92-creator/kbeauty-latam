@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Cuál es tu edad de piel real? | Mood Coreana</title>
+<meta name="description" content="6 preguntas rápidas para saber si tu piel actúa más joven, igual o más grande que tú, con rutina y productos recomendados.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">✨ Mood Coreana</a>
+    <nav class="main-nav">
+      <a href="../index.html">Test de piel</a>
+      <a href="../tests.html">Tests</a>
+      <a href="../articulos.html">Consejos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <a class="back-link" href="../tests.html">← Volver a Tests</a>
+
+  <!-- INTRO -->
+  <section id="screen-intro" class="screen active">
+    <h1>⏳ ¿Cuál es tu edad de piel real?</h1>
+    <p class="subtitle">6 preguntas rápidas (sí o no) para saber si tu piel actúa más joven, igual o más grande que tú — y qué hacer al respecto.</p>
+    <button class="btn-primary" onclick="startAgeQuiz()">Empezar el test →</button>
+    <p class="micro-note">Toma menos de 1 minuto. No necesitas registrarte.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen">
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+    <div id="question-container"></div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="screen-result" class="screen">
+    <div id="result-container"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclosure">Este sitio participa en programas de afiliados de belleza coreana. Podemos ganar una comisión por compras realizadas a través de nuestros enlaces, sin costo adicional para ti.</p>
+  </div>
+</footer>
+
+<script src="edad-de-piel.js"></script>
+</body>
+</html>

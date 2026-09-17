@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¿Cuál es tu Mood de Piel K-Drama? | Mood Coreana</title>
+<meta name="description" content="Descubre tu Mood de Piel al estilo K-Drama en 1 minuto y encuentra tu rutina de skincare coreano (K-Beauty) ideal.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">✨ Mood Coreana</a>
+    <nav class="main-nav">
+      <a href="index.html">Test de piel</a>
+      <a href="tests.html">Tests</a>
+      <a href="articulos.html">Consejos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- INTRO -->
+  <section id="screen-intro" class="screen active">
+    <h1>🎬 ¿Cuál es tu Mood de Piel K-Drama?</h1>
+    <p class="subtitle">Responde 12 preguntas rápidas (sí o no), descubre tu "personaje" de piel entre 16 posibles, tu rutina K-Beauty ideal y los productos que te convienen. Comparte tu resultado y reta a tus amigas a que hagan el test.</p>
+    <button class="btn-primary" onclick="startQuiz()">Empezar el test →</button>
+    <p class="micro-note">Toma menos de 2 minutos. No necesitas registrarte.</p>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="screen">
+    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+    <div id="question-container"></div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="screen-result" class="screen">
+    <div id="result-container"></div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="disclosure">Este sitio participa en programas de afiliados de belleza coreana. Podemos ganar una comisión por compras realizadas a través de nuestros enlaces, sin costo adicional para ti.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
