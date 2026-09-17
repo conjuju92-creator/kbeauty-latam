@@ -77,12 +77,14 @@
 
 - 2026-09-17: 브랜드명 확정 — "Mood Coreana"로 최종 결정(후보 GlowDrama/Piel de Seúl과 비교 후 선택. 현재 핵심 컨셉인 "K-드라마 무드 매칭"과 가장 직접적으로 맞아떨어지고, 향후 다른 테스트 확장에도 자연스럽다는 이유). 임시명 "K-Skin"을 전체 파일(index.html, articulos.html, tests.html, tests/edad-de-piel.html, articulos/*.html 5개, script.js의 카드 다운로드 워터마크 텍스트)에서 일괄 교체 완료. 브랜드명이 길어지면서 모바일(480px 이하)에서 헤더 로고+네비게이션이 겹칠 수 있어 `style.css`에 `.header-inner`에 `flex-wrap`과 모바일 전용 폰트 크기 축소 미디어쿼리 추가. PowerShell로 임시 로컬 서버(포트 8123) 띄우고 크롬에서 360px 폭으로 실제 확인 — 겹침 없이 로고/네비게이션 두 줄로 자연스럽게 줄바꿈되는 것 확인함(작업 후 서버 종료함).
 
+- 2026-09-17: Git 저장소 초기화 + GitHub Pages 배포 완료. GitHub 계정 conjuju92-creator로 public 저장소 `kbeauty-latam` 생성(https://github.com/conjuju92-creator/kbeauty-latam), master 브랜치 루트에서 GitHub Pages 서빙 설정. 실제 배포 URL: **https://conjuju92-creator.github.io/kbeauty-latam/** — 빌드 완료 및 200 응답 확인함. Public으로 만든 이유: 무료 GitHub Pages는 public 저장소에서만 가능하고, CLAUDE.md의 공급처/자본 계획 메모에는 API키나 개인정보 같은 민감정보는 없어서 공개해도 무방하다고 판단(사용자 확인받음). 이제 이 URL로 애드센스 신청, 지인 반응 테스트, SNS 공유 등 가능.
+
 ## 다음 할 일 (미정 항목)
 - Jolse / StyleKorean 어필리에이트 프로그램 가입 (사용자 본인이 직접, 승인 후 실제 링크로 `script.js`와 각 글의 상품 링크 교체)
-- 도메인 구매 + 배포 완료되면: 구글 애드센스(또는 다른 광고 네트워크) 신청 → 승인되면 `.ad-slot` 자리에 실제 광고 스크립트 삽입
+- 구글 애드센스(또는 다른 광고 네트워크) 신청 — 배포 URL(https://conjuju92-creator.github.io/kbeauty-latam/) 생겼으니 지금 신청 가능. 승인되면 `.ad-slot` 자리에 실제 광고 스크립트 삽입
 - 테스트 추가 아이디어(스킨케어 색깔 유지하는 선에서): 메이크업 루틴 테스트 등 — 순수 엔터테인먼트성 테스트(연예인/실존인물 절대 배제)는 트래픽용으로 나중에 고려 가능
 - (선택) SkinB.mx(멕시코), LabKo(브라질) 등 현지 판매처에 제휴 가능 여부 문의 메일 — 결제 편의성 더 좋음
-- 도메인/호스팅 결정 (GitHub Pages로 우선 배포 가능, VGo 프로젝트와 동일한 방식)
+- (선택) 커스텀 도메인 구매해서 GitHub Pages에 연결 — 지금은 github.io 서브도메인으로 충분, 반응 검증 후 고려
 - 트래픽 확보 방법 결정 (SEO, SNS, 광고 등)
 - 보류 중: 한국 화장품 후기 영상 큐레이션 섹션, 커뮤니티(트래픽 생긴 후 재검토)
 - 반응 검증되면 2단계(직접 드롭쉬핑 또는 판매)로 확장 여부 재검토
