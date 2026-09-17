@@ -79,6 +79,8 @@
 
 - 2026-09-17: Git 저장소 초기화 + GitHub Pages 배포 완료. GitHub 계정 conjuju92-creator로 public 저장소 `kbeauty-latam` 생성(https://github.com/conjuju92-creator/kbeauty-latam), master 브랜치 루트에서 GitHub Pages 서빙 설정. 실제 배포 URL: **https://conjuju92-creator.github.io/kbeauty-latam/** — 빌드 완료 및 200 응답 확인함. Public으로 만든 이유: 무료 GitHub Pages는 public 저장소에서만 가능하고, CLAUDE.md의 공급처/자본 계획 메모에는 API키나 개인정보 같은 민감정보는 없어서 공개해도 무방하다고 판단(사용자 확인받음). 이제 이 URL로 애드센스 신청, 지인 반응 테스트, SNS 공유 등 가능.
 
+- 2026-09-17: 커스텀 도메인 `moodcoreana.com` 구매 완료(Namecheap, 사용자 본인이 결제, 연 $11.48 — Domain Privacy 무료 포함, 불필요한 호스팅/이메일 업셀은 제외함). 사용자가 Namecheap에 로그인해둔 상태에서 DNS 설정 작업은 제가 대신 진행(명시적 요청 받음): 저장소에 `CNAME` 파일 추가(`moodcoreana.com`) + `gh api`로 GitHub Pages 커스텀 도메인 지정. Namecheap Advanced DNS에서 기존 파킹 페이지 기본 레코드(URL Redirect, www CNAME→parkingpage) 삭제하고 GitHub Pages용 A레코드 4개(185.199.108/109/110/111.153, host `@`) + CNAME(`www` → `conjuju92-creator.github.io.`) 등록 완료. DNS는 이미 전파됨(구글 DNS 8.8.8.8로 apex 도메인 확인, A레코드 4개 다 뜸 — www는 아직 전파 대기 중). HTTP은 이미 200으로 정상 서빙 확인(`http://moodcoreana.com` → Mood Coreana 사이트 정상 로드). **HTTPS(SSL) 인증서는 아직 GitHub이 발급 전**("The certificate does not exist yet" — GitHub이 DNS 확인 후 Let's Encrypt 인증서를 자동 발급하는데 보통 몇 분~1시간, 드물게 최대 24시간 소요) — 다음 세션에서 `gh api repos/conjuju92-creator/kbeauty-latam/pages`로 `https_enforced` 상태 재확인 필요. 발급되면 `-F "https_enforced=true"`로 강제 HTTPS 켜기.
+
 ## 다음 할 일 (미정 항목)
 - Jolse / StyleKorean 어필리에이트 프로그램 가입 (사용자 본인이 직접, 승인 후 실제 링크로 `script.js`와 각 글의 상품 링크 교체)
 - 구글 애드센스(또는 다른 광고 네트워크) 신청 — 배포 URL(https://conjuju92-creator.github.io/kbeauty-latam/) 생겼으니 지금 신청 가능. 승인되면 `.ad-slot` 자리에 실제 광고 스크립트 삽입
