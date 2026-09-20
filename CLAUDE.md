@@ -81,13 +81,17 @@
 
 - 2026-09-17: 커스텀 도메인 `moodcoreana.com` 구매 완료(Namecheap, 사용자 본인이 결제, 연 $11.48 — Domain Privacy 무료 포함, 불필요한 호스팅/이메일 업셀은 제외함). 사용자가 Namecheap에 로그인해둔 상태에서 DNS 설정 작업은 제가 대신 진행(명시적 요청 받음): 저장소에 `CNAME` 파일 추가(`moodcoreana.com`) + `gh api`로 GitHub Pages 커스텀 도메인 지정. Namecheap Advanced DNS에서 기존 파킹 페이지 기본 레코드(URL Redirect, www CNAME→parkingpage) 삭제하고 GitHub Pages용 A레코드 4개(185.199.108/109/110/111.153, host `@`) + CNAME(`www` → `conjuju92-creator.github.io.`) 등록 완료. DNS는 이미 전파됨(구글 DNS 8.8.8.8로 apex 도메인 확인, A레코드 4개 다 뜸 — www는 아직 전파 대기 중). HTTP은 이미 200으로 정상 서빙 확인(`http://moodcoreana.com` → Mood Coreana 사이트 정상 로드). **HTTPS(SSL) 인증서는 아직 GitHub이 발급 전**("The certificate does not exist yet" — GitHub이 DNS 확인 후 Let's Encrypt 인증서를 자동 발급하는데 보통 몇 분~1시간, 드물게 최대 24시간 소요) — 다음 세션에서 `gh api repos/conjuju92-creator/kbeauty-latam/pages`로 `https_enforced` 상태 재확인 필요. 발급되면 `-F "https_enforced=true"`로 강제 HTTPS 켜기.
 
+- 2026-09-20: 수익성 재검토 — ChatGPT로 작성된 외부 분석(붙임글)을 근거로 "퀴즈 바이럴 트래픽 → 어필리에이트 구매전환" 구조의 실효성 재검토. 결론: 화장품 어필리에이트는 구조적으로 약한 니치(낮은 커미션 5~15%, 낮은 객단가, 짧은 쿠키기간, 충동구매 상품인데 아웃링크 모델이라 구매 마찰 큼). 숫자 시뮬레이션(월 방문자별 커미션+광고 수익 추정)으로도 신규 도메인이 1년+ 꾸준히 투자해도 월 수익이 용돈 수준(20~50만원대)에 그칠 것으로 나옴 — "매력적인 비즈니스 아이템은 아니다"로 합의. 채널 피벗(틱톡/릴스 숏폼+인앱 쇼핑으로 이동, 화장품 자체는 충동구매 카테고리라 소셜커머스와 상성 좋음) 검토했으나, 사용자가 직접 출연은 어렵다고 확인하여 이 옵션 보류. 최종 결정: **moodcoreana.com은 "곁다리로 굴리는 SEO 자산" 포지션으로 격하** — 본업으로 자본/시간을 태우지 않고, 무자본 상태를 유지하며 장기 SEO 트래픽만 노림. 참고로 기존 VPN 제휴 프로젝트(`C:\webpage`)가 구조적으로 더 유리한 카테고리(고관여·비충동구매, 건당 커미션 $15~50대)로 재확인됨 — 향후 시간 배분 시 비교 대상.
+- 2026-09-20: 위 "SEO 포지션" 결정에 따라 사이트 구조 리포지셔닝 작업. ① K-드라마 무드 퀴즈를 루트(`index.html`)에서 `tests/mood-drama.html`로 이동 — 퀴즈는 더 이상 랜딩 경험이 아니라 `tests.html` 허브에서 찾아가는 보조 콘텐츠로 격하. ② `index.html`을 퀴즈 랜딩에서 "K-beauty 스킨케어 가이드" 콘텐츠 허브로 전면 재작성 — 기존 아티클 5개를 블로그그리드로 노출하고, 퀴즈는 하단 CTA 박스로만 링크. ③ 전체 페이지(9개: index/articulos/tests/tests의 edad-de-piel/articulos 5개) 네비게이션에서 "Test de piel" → "Inicio"로 변경, CTA/카드의 퀴즈 링크를 전부 `tests/mood-drama.html`로 수정. ④ 어필리에이트 프로그램 심사 대비용 신규 페이지 3개 추가: `sobre-nosotros.html`(사이트 소개+수익구조 고지, 의료 전문가 아님을 명시), `contacto.html`(연락처: conjuju92@gmail.com), `privacidad.html`(개인정보처리방침, 데이터 미수집·어필리에이트 링크 고지). 전체 페이지 푸터에 이 3개 페이지로 가는 `.footer-links` 추가. PowerShell 임시 HttpListener 서버로 8개 핵심 페이지 전부 200 응답 확인함(서버는 작업 후 종료).
+- 2026-09-20: 화장품 어필리에이트 중 고커미션 프로그램 조사 완료 — Beauty Tap 15%, OLIVE YOUNG Global 최대 13%(티어제, PayPal 정산), StyleKorean 최대 12%(+포인트전환 15%는 현금 아님), Lakinza/TofuSecret/Soko Glam/YesStyle 10% 내외. 다만 검색 결과 어디에도 남미 배송·로컬 결제 지원 여부는 명시 안 돼있어 개별 문의 필요. Olive Young Global이 브랜드 신뢰도+티어 상승 가능성 면에서 1순위 컨택 후보로 판단.
+
 ## 다음 할 일 (미정 항목)
-- Jolse / StyleKorean 어필리에이트 프로그램 가입 (사용자 본인이 직접, 승인 후 실제 링크로 `script.js`와 각 글의 상품 링크 교체)
-- 구글 애드센스(또는 다른 광고 네트워크) 신청 — 배포 URL(https://conjuju92-creator.github.io/kbeauty-latam/) 생겼으니 지금 신청 가능. 승인되면 `.ad-slot` 자리에 실제 광고 스크립트 삽입
-- 테스트 추가 아이디어(스킨케어 색깔 유지하는 선에서): 메이크업 루틴 테스트 등 — 순수 엔터테인먼트성 테스트(연예인/실존인물 절대 배제)는 트래픽용으로 나중에 고려 가능
+- (우선순위 낮춤, 사이드 프로젝트로만 유지) OLIVE YOUNG Global / Beauty Tap / StyleKorean 등 고커미션 어필리에이트 프로그램 가입 시도 — 사용자 본인이 직접(개인정보 입력 필요). StyleKorean 등 일부는 SNS 계정(Instagram/TikTok/YouTube) 보유가 가입 조건이라 얼굴 노출 없는 브랜드 계정 개설이 필요할 수 있음
+- 승인되면 `script.js`와 각 글의 상품 링크를 실제 추적 링크로 교체
+- 구글 애드센스(또는 다른 광고 네트워크) 신청 — moodcoreana.com 도메인으로 신청 가능. 승인되면 `.ad-slot` 자리에 실제 광고 스크립트 삽입
 - (선택) SkinB.mx(멕시코), LabKo(브라질) 등 현지 판매처에 제휴 가능 여부 문의 메일 — 결제 편의성 더 좋음
-- (선택) 커스텀 도메인 구매해서 GitHub Pages에 연결 — 지금은 github.io 서브도메인으로 충분, 반응 검증 후 고려
-- 트래픽 확보 방법 결정 (SEO, SNS, 광고 등)
+- 트래픽 확보 방법 결정은 SEO(아티클 콘텐츠 확장) 중심으로 — 유료광고/인플루언서 등 자본 투입형 채널은 반응 검증 전까지 보류
+- VPN 제휴 프로젝트(`C:\webpage`) 대비 시간 배분 재검토 — 구조적으로 더 유리한 카테고리이므로 우선순위 비교 필요
 - 보류 중: 한국 화장품 후기 영상 큐레이션 섹션, 커뮤니티(트래픽 생긴 후 재검토)
 - 반응 검증되면 2단계(직접 드롭쉬핑 또는 판매)로 확장 여부 재검토
 - 판매할 화장품 카테고리/제품 라인업 확정 (스킨케어/색조/특정 브랜드 등)

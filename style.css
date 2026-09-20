@@ -262,6 +262,17 @@ main.container { padding-top: 48px; padding-bottom: 48px; min-height: 60vh; }
   padding: 24px 0;
 }
 .disclosure { color: var(--text-light); font-size: 0.8rem; text-align: center; }
+.footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+.footer-links a { color: var(--text-light); font-size: 0.85rem; text-decoration: none; }
+.footer-links a:hover { color: var(--pink); }
+
+/* Simple content page (about / contact / privacy) */
+.simple-page { padding: 32px 0 48px; max-width: 560px; margin: 0 auto; }
+.simple-page h1 { font-size: 1.8rem; margin-bottom: 16px; }
+.simple-page h2 { font-size: 1.2rem; margin: 24px 0 10px; }
+.simple-page p { margin-bottom: 14px; color: var(--text); }
+.simple-page a { color: var(--pink-dark); }
+.simple-page .updated { color: var(--text-light); font-size: 0.85rem; margin-bottom: 24px; }
 
 /* Blog listing */
 .page-header { text-align: center; padding: 32px 0 8px; }

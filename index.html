@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>¿Cuál es tu Mood de Piel K-Drama? | Mood Coreana</title>
-<meta name="description" content="Descubre tu Mood de Piel al estilo K-Drama en 1 minuto y encuentra tu rutina de skincare coreano (K-Beauty) ideal.">
+<title>Mood Coreana | Guía de Skincare Coreano (K-Beauty) para Latinoamérica</title>
+<meta name="description" content="Guías claras sobre skincare coreano: rutinas, ingredientes, protector solar y cómo elegir productos K-Beauty según tu tipo de piel.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
   <div class="container header-inner">
     <a href="index.html" class="logo">✨ Mood Coreana</a>
     <nav class="main-nav">
-      <a href="index.html">Test de piel</a>
+      <a href="index.html">Inicio</a>
       <a href="tests.html">Tests</a>
       <a href="articulos.html">Consejos</a>
     </nav>
@@ -22,33 +22,63 @@
 
 <main class="container">
 
-  <!-- INTRO -->
-  <section id="screen-intro" class="screen active">
-    <h1>🎬 ¿Cuál es tu Mood de Piel K-Drama?</h1>
-    <p class="subtitle">Responde 12 preguntas rápidas (sí o no), descubre tu "personaje" de piel entre 16 posibles, tu rutina K-Beauty ideal y los productos que te convienen. Comparte tu resultado y reta a tus amigas a que hagan el test.</p>
-    <button class="btn-primary" onclick="startQuiz()">Empezar el test →</button>
-    <p class="micro-note">Toma menos de 2 minutos. No necesitas registrarte.</p>
+  <section class="page-header">
+    <h1>Tu guía de skincare coreano (K-Beauty)</h1>
+    <p>Rutinas, ingredientes y consejos explicados en simple, para que elijas los productos correctos según tu piel — sin relleno.</p>
   </section>
 
-  <!-- QUIZ -->
-  <section id="screen-quiz" class="screen">
-    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
-    <div id="question-container"></div>
+  <section class="blog-grid">
+
+    <a class="blog-card" href="articulos/como-elegir-segun-tu-piel.html">
+      <span class="tag">Básicos</span>
+      <h2>Cómo elegir tus productos según tu tipo de piel</h2>
+      <p>Qué buscar (y qué evitar) en las etiquetas según si tienes piel seca, grasa, mixta o sensible.</p>
+    </a>
+
+    <a class="blog-card" href="articulos/rutina-10-pasos.html">
+      <span class="tag">Rutina</span>
+      <h2>Rutina de skincare coreana de 10 pasos: guía para principiantes</h2>
+      <p>Qué es, en qué orden va cada producto y cómo adaptarla si estás empezando.</p>
+    </a>
+
+    <a class="blog-card" href="articulos/ingredientes-clave.html">
+      <span class="tag">Ingredientes</span>
+      <h2>5 ingredientes estrella del K-Beauty que debes conocer</h2>
+      <p>Centella asiática, mucina de caracol, niacinamida y más: qué hacen realmente.</p>
+    </a>
+
+    <a class="blog-card" href="articulos/purging-vs-alergia.html">
+      <span class="tag">Cuidados</span>
+      <h2>¿Qué es el "purging" y cómo diferenciarlo de una alergia?</h2>
+      <p>Tu piel empeoró después de un producto nuevo. Así puedes distinguir ambos casos.</p>
+    </a>
+
+    <a class="blog-card" href="articulos/protector-solar-coreano.html">
+      <span class="tag">Protección solar</span>
+      <h2>Protector solar coreano vs. protector solar occidental</h2>
+      <p>Por qué tienen una textura tan distinta y cuál conviene para clima tropical.</p>
+    </a>
+
   </section>
 
-  <!-- RESULT -->
-  <section id="screen-result" class="screen">
-    <div id="result-container"></div>
-  </section>
+  <div class="cta-box">
+    <h3>🎬 ¿Prefieres descubrir tu piel jugando?</h3>
+    <p>Prueba nuestros tests interactivos: tu Mood de Piel K-Drama o tu edad de piel real.</p>
+    <a class="btn-primary" href="tests.html">Ver los tests →</a>
+  </div>
 
 </main>
 
 <footer class="site-footer">
   <div class="container">
+    <nav class="footer-links">
+      <a href="sobre-nosotros.html">Sobre nosotros</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Privacidad</a>
+    </nav>
     <p class="disclosure">Este sitio participa en programas de afiliados de belleza coreana. Podemos ganar una comisión por compras realizadas a través de nuestros enlaces, sin costo adicional para ti.</p>
   </div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
