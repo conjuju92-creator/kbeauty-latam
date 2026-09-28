@@ -86,6 +86,7 @@
 - 2026-09-20: 화장품 어필리에이트 중 고커미션 프로그램 조사 완료 — Beauty Tap 15%, OLIVE YOUNG Global 최대 13%(티어제, PayPal 정산), StyleKorean 최대 12%(+포인트전환 15%는 현금 아님), Lakinza/TofuSecret/Soko Glam/YesStyle 10% 내외. 다만 검색 결과 어디에도 남미 배송·로컬 결제 지원 여부는 명시 안 돼있어 개별 문의 필요. Olive Young Global이 브랜드 신뢰도+티어 상승 가능성 면에서 1순위 컨택 후보로 판단.
 - 2026-09-27: 9/20 리포지셔닝 커밋이 push 안 된 상태였음 → push 완료. HTTPS 인증서가 10일째 미발급이라 `gh api`로 커스텀 도메인 제거 후 재등록(저장소에 "Delete CNAME"/"Create CNAME" 커밋 자동 생성됨) → 인증서 approved, `https_enforced=true` 설정, https://moodcoreana.com 200 확인. 방향: 사이트 1개(이 사이트)만 굴림. VPN 프로젝트(`C:\webpage`)는 폴더가 없어짐. 다음: 사용자 본인이 OLIVE YOUNG Global 제휴 가입 → "한국에서만 알 수 있는 정보"(올리브영 랭킹 등) 방식으로 글 추가.
 - 2026-09-29: SEO 기본 파일 추가(`robots.txt`, `sitemap.xml` 15개 주소). 새 글 2개: `articulos/palabras-coreanas-etiquetas.html`(한국어 라벨 단어 18개, "한국인이 쓴 글" 강점), `articulos/doble-limpieza.html`(더블 클렌징). index/articulos 목록 맨 앞에 카드 추가. Olive Young 배송 글은 멕시코 배송 여부 자료가 엇갈려(공식은 가능, 틱톡엔 "중단" 글) 보류. 다음: 사용자가 구글 서치 콘솔에 사이트 등록 + sitemap 제출.
+- 2026-09-29: 새 글 2개 더: `articulos/como-elegir-protector-solar-coreano.html`(무기자차·유기자차·백탁·톤업·PA, 까만 피부엔 톤업 피하기), `articulos/tipos-de-mascarillas-coreanas.html`(시트·슬리핑팩·워시오프·패치). 목록·sitemap 반영, 기존 선크림 글과 서로 링크. 글 총 9개.
 
 ## 다음 할 일 (미정 항목)
 - (우선순위 낮춤, 사이드 프로젝트로만 유지) OLIVE YOUNG Global / Beauty Tap / StyleKorean 등 고커미션 어필리에이트 프로그램 가입 시도 — 사용자 본인이 직접(개인정보 입력 필요). StyleKorean 등 일부는 SNS 계정(Instagram/TikTok/YouTube) 보유가 가입 조건이라 얼굴 노출 없는 브랜드 계정 개설이 필요할 수 있음
